@@ -72,7 +72,7 @@ const FinalCelebration: React.FC = () => {
             <div className="relative flex items-center">
               
               {/* mia foto */}
-              <div className="w-24 h-24 md:w-32 md:h-32 rounded-full border-4 border-[var(--brand-primary)] overflow-hidden z-20 bg-white shadow-2xl">
+              <div className="w-24 h-24 md:w-32 md:h-32 rounded-full border-4 border-[var(--brand-accent)] overflow-hidden z-20 bg-white shadow-2xl">
                 <img 
                   src={`${(import.meta as any).env.BASE_URL}grazia_baiamonte.jpeg`}
                   alt="Grazia"
@@ -91,7 +91,7 @@ const FinalCelebration: React.FC = () => {
               </motion.div>
 
 
-              <div className="w-24 h-24 md:w-32 md:h-32 rounded-full border-4 border-[var(--brand-primary)] overflow-hidden -ml-6 z-10 bg-white flex items-center justify-center shadow-2xl">
+              <div className="w-24 h-24 md:w-32 md:h-32 rounded-full border-4 border-[var(--brand-accent)] overflow-hidden -ml-6 z-10 bg-white flex items-center justify-center shadow-2xl">
     <img 
       src={`${(import.meta as any).env.BASE_URL}logo.png`} 
       alt="Caffeina Logo"

@@ -8,7 +8,7 @@
     "build": "vite build",
     "preview": "vite preview",
     "predeploy": "npm run build",
-  "deploy": "gh-pages -d dist"
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "canvas-confetti": "^1.9.4",
@@ -19,6 +19,7 @@
     "react-dom": "^19.2.4"
   },
   "devDependencies": {
+    "@types/canvas-confetti": "^1.9.0",
     "@types/matter-js": "^0.20.2",
     "@types/node": "^22.14.0",
     "@types/react": "^19.2.13",

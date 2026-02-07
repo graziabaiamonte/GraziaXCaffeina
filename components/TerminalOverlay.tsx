@@ -96,7 +96,7 @@ const handleNext = useCallback(() => {
         </div>
         <span className="text-[10px] text-white/60 uppercase tracking-widest flex items-center">
           <span className="w-2 h-2 rounded-full bg-emerald-500 mr-2 animate-pulse"></span>
-          grazia_core_v2.zsh
+          grazia_core.zsh
         </span>
         <div className="w-10"></div>
       </div>

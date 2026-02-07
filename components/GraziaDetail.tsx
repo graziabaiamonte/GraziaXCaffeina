@@ -118,7 +118,7 @@ const GraziaDetail: React.FC<GraziaDetailProps> = ({ showFinal, onAllValuesUnloc
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch mb-12">
           <div className="lg:col-span-4 flex flex-col space-y-4">
             <div className="mb-4">
-              <h2 className="text-lg font-medium mb-1 text-[var(--text-primary)]  italic tracking-wide">Vuoi scoprire cosa c'è dietro il profilo? Fai tap sui behavior per vedere i fatti</h2>
+              <h2 className="text-lg font-medium mb-1 text-[var(--text-primary)]  italic tracking-wide">Vuoi scoprire cosa c'è dietro il profilo? Fai tap sui behaviour per vedere i fatti</h2>
               {/* <p className="text-[var(--text-primary)] opacity-50 text-xs font-medium uppercase tracking-widest">Analizza i dati di sistema...</p> */}
             </div>
             
@@ -139,12 +139,12 @@ const GraziaDetail: React.FC<GraziaDetailProps> = ({ showFinal, onAllValuesUnloc
                     onClick={() => handleValueClick(val.id, val.anecdote)}
                     aria-pressed={isActive}
                     className={`
-                      relative py-3 px-4 md:py-4 md:px-8 rounded-full font-bold text-[10px] md:text-sm uppercase tracking-tight transition-all duration-300 shadow-lg border-2
+                      relative py-3 px-4 md:py-4 md:px-8 rounded-full font-bold text-[10px] md:text-sm uppercase transition-all duration-300 shadow-lg border-2
                       ${isActive 
                         ? 'bg-[var(--brand-secondary)] text-[var(--bg-base)] border-[var(--brand-secondary)] scale-105' 
                         : 'bg-[#4c2e9d] border-[#4c2e9d] text-white'
                       }
-                      ${!isUnlocked && !isActive ? 'opacity-80 hover:opacity-100' : 'opacity-100'}
+                      ${!isUnlocked && !isActive ? 'opacity-40 hover:opacity-100' : 'opacity-100'}
                     `}
                   >
                     <div className="flex items-center justify-between">
