@@ -1,0 +1,131 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DevMatch</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700;900&family=JetBrains+Mono&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-base: #371F7E; /* Deep Matte Purple Background */
+            --bg-glass:#241e38;
+            --text-primary: #ffffff; /* Pure White for contrast */
+            --brand-primary: #BC96FE; /* Vibrant Lavender */
+            --brand-secondary: #D9FF83; /* Matte Lime */
+            --brand-accent: #D9FF83; /* Matching Lime */
+            --brand-error: #FF4265; /* Matte Coral/Pink */
+        }
+        body {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 300;
+            margin: 0;
+            padding: 0;
+            background-color: var(--bg-base);
+            color: var(--text-primary);
+            overflow-x: hidden;
+            min-height: 100vh;
+        }
+
+        #root {
+            position: relative;
+            z-index: 2;
+        }
+
+        .font-terminal {
+            font-family: 'JetBrains Mono', monospace;
+        }
+        
+        .btn-brand-wrapper {
+            padding: 2px;
+            border-radius: 9999px;
+            background: linear-gradient(to right, var(--brand-primary), var(--brand-secondary));
+            display: inline-block;
+            transition: all 0.3s ease;
+        }
+        .btn-brand-inner {
+            background: #ffffff;
+            color: var(--bg-base);
+            padding: 1rem 2.5rem;
+            border-radius: 9999px;
+            font-weight: 700;
+            font-size: 1.25rem;
+            transition: all 0.3s ease;
+            display: block;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+        .btn-brand-wrapper:hover .btn-brand-inner {
+            background: var(--brand-primary);
+            color: #ffffff;
+        }
+
+        .btn-action-wrapper {
+            padding: 2px;
+            border-radius: 9999px;
+            display: inline-block;
+            transition: all 0.3s ease;
+        }
+        .btn-action-inner {
+            border-radius: 9999px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-action-wrapper.nope:hover .btn-action-inner {
+            background: var(--brand-error);
+            color: white;
+        }
+        .btn-action-wrapper.like:hover .btn-action-inner {
+            background: var(--brand-primary);
+            color: white;
+        }
+
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 5px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: rgba(255, 255, 255, 0.05);
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: var(--brand-primary);
+            border-radius: 10px;
+        }
+        
+        .terminal-text {
+            font-family: 'JetBrains Mono', monospace !important;
+        }
+        
+        h1, h2, h3, .font-medium {
+            font-weight: 700;
+        }
+
+        /* Focus states for accessibility */
+        button:focus-visible {
+            outline: 3px solid var(--brand-primary);
+            outline-offset: 2px;
+        }
+    </style>
+<script type="importmap">
+{
+  "imports": {
+    "react": "https://esm.sh/react@^19.2.4",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.4/",
+    "react/": "https://esm.sh/react@^19.2.4/",
+    "framer-motion": "https://esm.sh/framer-motion@^12.33.0",
+    "lucide-react": "https://esm.sh/lucide-react@^0.563.0",
+    "canvas-confetti": "https://esm.sh/canvas-confetti@^1.9.4",
+    "matter-js": "https://esm.sh/matter-js@^0.20.0"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+<body>
+    <div id="root"></div>
+<script type="module" src="/index.tsx"></script>
+</body>
+</html>
