@@ -163,7 +163,10 @@ const GraziaDetail: React.FC<GraziaDetailProps> = ({ showFinal, onAllValuesUnloc
           </div>
 
           <div className="lg:col-span-8 h-[600px] lg:h-auto min-h-[500px]">
-            <TerminalComponent content={activeAnecdote} />
+            <TerminalComponent 
+    key={activeAnecdote?.join('') || 'empty'} 
+    content={activeAnecdote} 
+  />
           </div>
         </div>
 

@@ -67,13 +67,14 @@ const TerminalComponent: React.FC<TerminalComponentProps> = ({ content }) => {
     }
   }, [content]);
 
-  const handleNext = useCallback(() => {
-    if (content && visibleCount < content.length) {
-      setTimeout(() => {
-        setVisibleCount((prev) => prev + 1);
-      }, 2000); // 2 secondi di pausa dopo la fine del typing
-    }
-  }, [content, visibleCount]);
+const handleNext = useCallback(() => {
+  if (content && visibleCount < content.length) {
+    const timer = setTimeout(() => {
+      setVisibleCount((prev) => prev + 1);
+    }, 1000); // Ridotto un po' per rendere il terminale più reattivo
+    return () => clearTimeout(timer);
+  }
+}, [content, visibleCount]);
 
   useEffect(() => {
     if (scrollRef.current) {
