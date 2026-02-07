@@ -52,7 +52,7 @@ const GraziaDetail: React.FC<GraziaDetailProps> = ({ showFinal, onAllValuesUnloc
         {/* Top Profile Header */}
         <div className="flex flex-col md:flex-row gap-8 mb-12 items-start md:items-center">
           <div className="w-24 h-24 md:w-32 md:h-32 flex-shrink-0">
-            <div className="rounded-full overflow-hidden border-4 border-[var(--brand-primary)] shadow-2xl relative w-full h-full">
+            <div className="rounded-full overflow-hidden border-4 border-[var(--brand-secondary)] shadow-2xl relative w-full h-full">
               <img 
                 src={`${(import.meta as any).env.BASE_URL}grazia_baiamonte.jpeg`}
                 alt="Grazia" 
@@ -62,8 +62,8 @@ const GraziaDetail: React.FC<GraziaDetailProps> = ({ showFinal, onAllValuesUnloc
           </div>
           <div className="flex-1">
             <div className="flex flex-col md:flex-row md:items-baseline gap-4 mb-2">
-              <h1 className="text-4xl md:text-5xl font-medium text-[var(--text-primary)]">Grazia B. <span className="text-[var(--text-primary)] opacity-50 font-light text-2xl">| 24</span></h1>
-              <p className="text-[var(--brand-primary)] font-medium italic uppercase tracking-tighter">"The Ultimate Frontend Match"</p>
+              <h1 className="text-3xl font-medium uppercase text-[var(--text-primary)]">Grazia | 24</h1>
+              <p className="text-[var(--brand-secondary)] font-medium ">"Junior Frontend Developer"</p>
             </div>
             <div className="flex flex-wrap gap-4 md:gap-8">
               <div className="flex items-center text-[var(--bg-base)] text-xs font-medium bg-[var(--brand-primary)] px-4 py-2 rounded-full shadow-md">
@@ -100,7 +100,7 @@ const GraziaDetail: React.FC<GraziaDetailProps> = ({ showFinal, onAllValuesUnloc
 
               <div className="flex justify-between items-center mb-3">
                 <span className="font-medium flex items-center text-xs text-[var(--text-primary)] uppercase tracking-widest">
-                  Match-o-Meter
+                  Match Meter
                 </span>
                 <span className="text-[var(--text-primary)] font-terminal text-sm font-bold" aria-live="polite">{compatibility}%</span>
               </div>
@@ -118,8 +118,8 @@ const GraziaDetail: React.FC<GraziaDetailProps> = ({ showFinal, onAllValuesUnloc
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch mb-12">
           <div className="lg:col-span-4 flex flex-col space-y-4">
             <div className="mb-4">
-              <h2 className="text-2xl font-medium mb-1 text-[var(--text-primary)] uppercase italic tracking-wide">I Nostri Valori</h2>
-              <p className="text-[var(--text-primary)] opacity-50 text-xs font-medium uppercase tracking-widest">Analizza i dati di sistema...</p>
+              <h2 className="text-lg font-medium mb-1 text-[var(--text-primary)]  italic tracking-wide">Vuoi scoprire cosa c'è dietro il profilo? Fai tap sui behavior per vedere i fatti</h2>
+              {/* <p className="text-[var(--text-primary)] opacity-50 text-xs font-medium uppercase tracking-widest">Analizza i dati di sistema...</p> */}
             </div>
             
             <div className="grid grid-cols-2 md:grid-cols-1 gap-3 md:space-y-3">

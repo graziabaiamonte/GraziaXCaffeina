@@ -27,7 +27,7 @@ const App: React.FC = () => {
           backdropFilter: phase === AppPhase.LANDING ? 'blur(0px)' : 'blur(20px)'
         }}
         transition={{ duration: 0.7, ease: "easeInOut" }}
-        className="fixed inset-0 z-5 pointer-events-none bg-[var(--bg-glass)]/98"
+        className="fixed inset-0 z-5 pointer-events-none bg-black/30"
       />
 
       {/* 

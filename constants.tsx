@@ -27,7 +27,7 @@ export const CANDIDATES: Candidate[] = [
     name: 'Grazia',
     role: 'Junior Frontend Developer',
     bio: 'Ciao, sono Grazia! Ho un debole per il codice pulito e le sfide impossibili. Scopri i miei 6 Values per capire perché siamo fatti l\'uno per l\'altra.',
-    imageUrl: '/grazia_baiamonte.jpeg',
+    imageUrl: 'grazia_baiamonte.jpeg',
     isTarget: true,
     location: 'Alcamo, TP',
     passions: ['Creative Coding', 'UX/UI Design', 'Books'],
@@ -37,17 +37,17 @@ export const CANDIDATES: Candidate[] = [
 export const GRAZIA_VALUES: ValuePoint[] = [
   {
     id: 'ambition',
-    label: 'Ambizione',
+    label: 'Ambition',
     anecdote: [
       "> Log: Ambition.exe initialized.",
-      "> Non accetto lo status quo. Se un processo è lento o inefficiente, il mio istinto è ottimizzarlo immediatamente.",
-      "> Ho trasformato un vecchio progetto legacy in una PWA moderna in soli due weekend, riducendo il tempo di caricamento del 70%.",
-      "> Il mio obiettivo non è solo scrivere codice, ma creare prodotti che lascino un segno tangibile nel tempo."
+      "> Mio malgrado, è vero che non mi accontento mai, ma LETTERALMENTE per ogni cosa: in palestra voglio ottenere sempre di più, ogni volta aumento sempre di un chilo il peso per vedere se riesco a sopportarlo e se non riesco la prima volta, non vado via finchè non riesco a fare almeno una serie anche di soli 3 ripetizioni con quel nuovo peso;",
+      "> quando cucino un nuovo piatto lo riprovo più volte cambiando piccoli dettagli finchè non trovo la ricetta top che mi soddisfa (al costo di preparare la stessa cosa per più cene consecutive rendendomi antipatica a tavola); a lavoro cerco di dare il meglio anche in cose che non ho mai fatto o che non mi vengono chieste poichè penso alla Grazia del futuro e vorrei che avesse quante più competenze trasversali possibili. ",
+      "> Mi piace parlare con gente affine al mio mestiere e parlare di lavoro potendo comprendere il contesto e tutto ciò che ci sta dietro. Voglio collezionare quante più cose possibili, cerco con metodi alternativi di appassionarmi in generale a un pò di tutto."
     ]
   },
   {
-    id: 'problem-solving',
-    label: 'Problem Solving',
+    id: 'excellence',
+    label: 'Excellence',
     anecdote: [
       "> DEBUG MODE: ACTIVE.",
       "> Un bug non è un errore fastidioso, ma un enigma logico che aspetta solo di essere risolto con eleganza.",
@@ -56,8 +56,8 @@ export const GRAZIA_VALUES: ValuePoint[] = [
     ]
   },
   {
-    id: 'teamwork',
-    label: 'Teamwork',
+    id: 'caring',
+    label: 'Caring',
     anecdote: [
       "> git checkout -b 'collaboration-culture'.",
       "> Credo fermamente che il codice migliore nasca dalla diversità di pensiero e dal confronto costruttivo.",
@@ -66,18 +66,8 @@ export const GRAZIA_VALUES: ValuePoint[] = [
     ]
   },
   {
-    id: 'clean-code',
-    label: 'Clean Code',
-    anecdote: [
-      "> prettier --write .",
-      "> Scrivo codice pensando che chi dovrà leggerlo tra sei mesi sia un collega che merita rispetto e chiarezza.",
-      "> Seguo i principi SOLID e i design pattern non come regole astratte, ma come fondamenta per la manutenibilità.",
-      "> Un componente da 500 righe è un debito tecnico che va rifattorizzato subito per garantire la qualità del prodotto."
-    ]
-  },
-  {
-    id: 'curiosity',
-    label: 'Curiosità',
+    id: 'growth',
+    label: 'Growth',
     anecdote: [
       "> New technology release detected. Fetching documentation...",
       "> La mia sete di conoscenza non ha limiti di banda; esploro costantemente le ultime evoluzioni del panorama tech.",
@@ -86,8 +76,18 @@ export const GRAZIA_VALUES: ValuePoint[] = [
     ]
   },
   {
-    id: 'reliability',
-    label: 'Affidabilità',
+    id: 'courage',
+    label: 'Courage',
+    anecdote: [
+      "> Status: 100% Commitment Uptime.",
+      "> Una deadline non è un suggerimento, è un impegno sacro che onoro con precisione chirurgica.",
+      "> Gestisco il mio tempo e le priorità in modo trasparente, garantendo che il team sia sempre allineato sullo stato del lavoro.",
+      "> Puoi contare sulla mia presenza e professionalità anche nelle sfide tecniche più complesse e urgenti."
+    ]
+  },
+   {
+    id: 'proactivity',
+    label: 'Proactivity',
     anecdote: [
       "> Status: 100% Commitment Uptime.",
       "> Una deadline non è un suggerimento, è un impegno sacro che onoro con precisione chirurgica.",
