@@ -42,8 +42,11 @@ const CandidateCard: React.FC<CardProps> = ({ candidate, isTop, visualIdx, onAct
       style={isTop ? { x, rotate: rotateValue, opacity: opacityValue } : {}}
       drag={isTop ? "x" : false}
       dragConstraints={{ left: 0, right: 0 }}
+      dragElastic={0.7}
       onDragEnd={handleDragEnd}
-      initial={isTop ? { scale: 0.9, opacity: 0, y: 20 } : false}
+      // initial={isTop ? { scale: 0.9, opacity: 0, y: 20 } : false}
+      // Usa transformPerspective per migliorare il rendering 3D su Chrome Android
+      initial={isTop ? { scale: 0.9, opacity: 0, y: 20, transformPerspective: 1000 } : false}
       animate={{ 
         scale: 1 - (visualIdx * 0.05),
         opacity: 1,
@@ -64,7 +67,7 @@ const CandidateCard: React.FC<CardProps> = ({ candidate, isTop, visualIdx, onAct
         damping: 30,
         y: isShaking ? { duration: 0.4 } : undefined
       }}
-      className={`absolute inset-0 rounded-[2rem] md:rounded-[2.5rem] overflow-hidden bg-white shadow-2xl flex flex-col border border-[var(--text-primary)] border-opacity-5 pointer-events-auto ${isTop ? 'cursor-grab active:cursor-grabbing touch-none' : 'pointer-events-none'}`}
+      className={`absolute inset-0 rounded-[2rem] md:rounded-[2.5rem] overflow-hidden bg-white shadow-2xl flex flex-col border border-[var(--text-primary)] border-opacity-5 pointer-events-auto ${isTop ? 'cursor-grab active:cursor-grabbing touch-none' : 'pointer-events-none'} will-change-transform`}
     >
       {isTop && (
         <>
@@ -100,7 +103,7 @@ const CandidateCard: React.FC<CardProps> = ({ candidate, isTop, visualIdx, onAct
             {candidate.passions.map((passion, i) => (
               <div 
                 key={i} 
-                className="px-3 py-1.5 md:px-4 md:py-2 rounded-full border border-white/30 bg-white/10 backdrop-blur-sm text-white text-[9px] md:text-[10px] font-bold uppercase tracking-widest"
+                className="px-3 py-1.5 md:px-4 md:py-2 rounded-full border border-white/70 bg-white/10 text-white text-[9px] md:text-[10px] font-bold uppercase tracking-widest"
               >
                 {passion}
               </div>

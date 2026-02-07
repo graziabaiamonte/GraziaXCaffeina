@@ -68,11 +68,11 @@ const GraziaDetail: React.FC<GraziaDetailProps> = ({ showFinal, onAllValuesUnloc
             <div className="flex flex-wrap gap-4 md:gap-8">
               <div className="flex items-center text-[var(--bg-base)] text-xs font-medium bg-[var(--brand-primary)] px-4 py-2 rounded-full shadow-md">
                 <MapPin size={14} className="mr-2 text-[var(--brand-accent)]" />
-                <span>0.0km DISTANZA</span>
+                <span>HYBRID</span>
               </div>
               <div className="flex items-center text-[var(--bg-base)] text-xs font-medium bg-[var(--brand-primary)] px-4 py-2 rounded-full shadow-md">
                 <Zap size={14} className="mr-2 text-[var(--brand-accent)]" />
-                <span>DISPONIBILITÀ: SUBITO</span>
+                <span>DISPONIBILE</span>
               </div>
               <div className="flex items-center text-[var(--bg-base)] text-xs font-medium bg-[var(--brand-primary)] px-4 py-2 rounded-full shadow-md">
                 <Briefcase size={14} className="mr-2 text-[var(--brand-accent)]" />
@@ -100,7 +100,7 @@ const GraziaDetail: React.FC<GraziaDetailProps> = ({ showFinal, onAllValuesUnloc
 
               <div className="flex justify-between items-center mb-3">
                 <span className="font-medium flex items-center text-xs text-[var(--text-primary)] uppercase tracking-widest">
-                  Match Meter
+                 Culture Fit Level
                 </span>
                 <span className="text-[var(--text-primary)] font-terminal text-sm font-bold" aria-live="polite">{compatibility}%</span>
               </div>

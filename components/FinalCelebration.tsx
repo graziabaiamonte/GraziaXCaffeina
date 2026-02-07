@@ -8,7 +8,7 @@ const FinalCelebration: React.FC = () => {
   useEffect(() => {
     const styles = getComputedStyle(document.documentElement);
     const colorPrimary = styles.getPropertyValue('--brand-primary').trim();
-    const colorText = styles.getPropertyValue('--bg-base').trim(); // Use dark purple for confetti too if desired
+    const colorText = styles.getPropertyValue('--bg-base').trim(); 
     const colorSecondary = styles.getPropertyValue('--brand-secondary').trim();
     const colorAccent = styles.getPropertyValue('--brand-accent').trim();
 
@@ -46,7 +46,7 @@ const FinalCelebration: React.FC = () => {
   }, []);
 
   const handleContact = () => {
-    window.location.href = "mailto:grazia.prova@gmail.com?subject=It's a Match! - Offerta di Lavoro&body=Ciao Grazia, abbiamo visto il tuo profilo su DevMatch e pensiamo che tu sia la risorsa perfetta per la nostra agenzia!";
+    window.location.href = "mailto:grazia.baiamonte3@gmail.com?subject=It's a Match! - Offerta di Lavoro&body=Ciao Grazia, abbiamo visto il tuo profilo su DevMatch e pensiamo che tu sia la risorsa perfetta per la nostra agenzia!";
   };
 
   return (
@@ -57,19 +57,11 @@ const FinalCelebration: React.FC = () => {
             initial={{ y: -20, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ delay: 0.2 }}
-            className="text-4xl md:text-7xl font-black mb-4 italic tracking-tighter text-[var(--bg-base)] uppercase"
+            className="text-4xl md:text-7xl font-black mb-4  tracking-tighter text-[var(--bg-base)] uppercase"
           >
             IT'S A <span className="text-[var(--brand-primary)]">PERFECT</span> MATCH!
           </motion.h1>
 
-          <motion.p
-            initial={{ y: -10, opacity: 0 }}
-            animate={{ y: 0, opacity: 1 }}
-            transition={{ delay: 0.3 }}
-            className="text-xl md:text-3xl font-bold mb-10 text-[var(--bg-base)] opacity-80"
-          >
-            Grazia + La Tua Agenzia
-          </motion.p>
 
           <motion.div 
             initial={{ scale: 0.5, opacity: 0 }}
@@ -78,10 +70,12 @@ const FinalCelebration: React.FC = () => {
             className="flex items-center justify-center mb-12"
           >
             <div className="relative flex items-center">
+              
+              {/* mia foto */}
               <div className="w-24 h-24 md:w-32 md:h-32 rounded-full border-4 border-[var(--brand-primary)] overflow-hidden z-20 bg-white shadow-2xl">
                 <img 
-                  src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=600&h=800&auto=format&fit=crop" 
-                  alt="Grazia B."
+                  src={`${(import.meta as any).env.BASE_URL}grazia_baiamonte.jpeg`}
+                  alt="Grazia"
                   className="w-full h-full object-cover"
                 />
               </div>
@@ -92,13 +86,18 @@ const FinalCelebration: React.FC = () => {
                 className="absolute left-1/2 -translate-x-1/2 z-30 bg-[var(--bg-base)] rounded-full p-2 shadow-lg"
               >
                 <div className="bg-[var(--brand-primary)] rounded-full p-2">
-                  <Sparkles size={24} className="text-white fill-white" />
+                  <Sparkles size={12} className="text-white fill-white" />
                 </div>
               </motion.div>
 
-              <div className="w-24 h-24 md:w-32 md:h-32 rounded-full border-4 border-[var(--bg-base)] border-opacity-10 overflow-hidden -ml-6 z-10 bg-gradient-to-br from-gray-50 to-gray-200 flex items-center justify-center shadow-2xl">
-                <Building2 size={48} className="text-[var(--bg-base)] opacity-20" />
-              </div>
+
+              <div className="w-24 h-24 md:w-32 md:h-32 rounded-full border-4 border-[var(--brand-primary)] overflow-hidden -ml-6 z-10 bg-white flex items-center justify-center shadow-2xl">
+    <img 
+      src={`${(import.meta as any).env.BASE_URL}logo.png`} 
+      alt="Caffeina Logo"
+      className="w-full h-full object-cover " 
+    />
+  </div>
             </div>
           </motion.div>
 
@@ -115,12 +114,12 @@ const FinalCelebration: React.FC = () => {
             >
               <Mail size={28} />
               <span>Fissiamo un Colloquio?</span>
-              <Sparkles size={20} className="absolute -top-3 -right-3 text-[var(--brand-secondary)] animate-bounce" />
+              {/* <Sparkles size={20} className="absolute -top-3 -right-3 text-[var(--brand-secondary)] animate-bounce" /> */}
             </button>
             
             <div className="flex flex-col gap-1">
-              <p className="text-[var(--bg-base)] opacity-70 font-bold uppercase tracking-widest text-sm">Contatto: <span className="text-[var(--brand-primary)]">grazia.prova@gmail.com</span></p>
-              <p className="text-xs text-[var(--bg-base)] opacity-40 uppercase tracking-[0.4em] font-terminal font-bold">SYSTEM STABLE | READY FOR ONBOARDING</p>
+              {/* <p className="text-[var(--bg-base)] opacity-70 font-bold uppercase tracking-widest text-sm">Contatto: <span className="text-[var(--brand-primary)]">grazia.baiamonte3@gmail.com</span></p> */}
+              <p className="text-xs text-[var(--bg-base)] opacity-40 uppercase tracking-[0.4em] font-terminal font-bold">READY FOR ONBOARDING</p>
             </div>
           </motion.div>
         </div>
