@@ -56,8 +56,14 @@ const LandingPhase: React.FC<LandingPhaseProps> = ({ onStart }) => {
         </div>
       </div>
       
-      <div className="absolute bottom-6 md:bottom-10 text-[8px] md:text-[10px] text-white opacity-40 uppercase tracking-[0.3em] md:tracking-[0.6em] font-medium pointer-events-none z-10 text-center w-full px-4">
+
+      {/* TODO scegli la frase migliore */}
+      {/* <div className="absolute bottom-6 md:bottom-10 text-[8px] md:text-[10px] text-white opacity-40 uppercase tracking-[0.3em] md:tracking-[0.6em] font-medium pointer-events-none z-10 text-center w-full px-4">
         Collisioni fisiche attive <span className="hidden sm:inline">•</span> <br className="sm:hidden" /> Interagisci con le forme
+      </div> */}
+
+      <div className="absolute bottom-6 md:bottom-10 text-[8px] md:text-[10px] text-white opacity-40 uppercase tracking-[0.3em] md:tracking-[0.6em] font-medium pointer-events-none z-10 text-center w-full px-4">
+        Rompiamo il ghiaccio? <span className="hidden sm:inline">•</span> <br className="sm:hidden" />Trascina le forme dove vuoi, prometto di non crashare
       </div>
     </motion.div>
   );
