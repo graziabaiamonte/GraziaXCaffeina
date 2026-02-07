@@ -54,7 +54,7 @@ const GraziaDetail: React.FC<GraziaDetailProps> = ({ showFinal, onAllValuesUnloc
           <div className="w-24 h-24 md:w-32 md:h-32 flex-shrink-0">
             <div className="rounded-full overflow-hidden border-4 border-[var(--brand-primary)] shadow-2xl relative w-full h-full">
               <img 
-                src="/grazia_baiamonte.jpeg" 
+                src={`${(import.meta as any).env.BASE_URL}grazia_baiamonte.jpeg`}
                 alt="Grazia" 
                 className="w-full h-full object-cover"
               />
