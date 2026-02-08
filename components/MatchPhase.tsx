@@ -40,9 +40,10 @@ const CandidateCard: React.FC<CardProps> = ({ candidate, isTop, visualIdx, onAct
   return (
     <motion.div
       style={isTop ? { x, rotate: rotateValue, opacity: opacityValue } : {}}
+  
       drag={isTop ? "x" : false}
       dragConstraints={{ left: 0, right: 0 }}
-      dragElastic={0.7}
+      dragElastic={0.2}
       onDragEnd={handleDragEnd}
       // initial={isTop ? { scale: 0.9, opacity: 0, y: 20 } : false}
       // Usa transformPerspective per migliorare il rendering 3D su Chrome Android
@@ -52,7 +53,8 @@ const CandidateCard: React.FC<CardProps> = ({ candidate, isTop, visualIdx, onAct
         opacity: 1,
         y: isTop ? (isShaking ? [0, -10, 10, -10, 10, 0] : 0) : visualIdx * 12,
         x: isTop ? 0 : visualIdx * 8,
-        rotate: isTop ? 0 : visualIdx * 1,
+        // rotate: isTop ? 0 : visualIdx * 1,
+          rotate: rotateValue,
         zIndex: 50 - visualIdx,
       }}
       exit={{ 
@@ -63,11 +65,12 @@ const CandidateCard: React.FC<CardProps> = ({ candidate, isTop, visualIdx, onAct
       }}
       transition={{ 
         type: "spring", 
-        stiffness: 350, 
+        // stiffness: 350, 
+           stiffness: 150, 
         damping: 30,
         y: isShaking ? { duration: 0.4 } : undefined
       }}
-      className={`absolute inset-0 rounded-[2rem] md:rounded-[2.5rem] overflow-hidden bg-white shadow-2xl flex flex-col border border-[var(--text-primary)] border-opacity-5 pointer-events-auto ${isTop ? 'cursor-grab active:cursor-grabbing touch-none' : 'pointer-events-none'} will-change-transform`}
+      className={`absolute inset-0 rounded-[2rem] md:rounded-[2.5rem] overflow-hidden bg-white shadow-2xl flex flex-col border border-[var(--text-primary)] border-opacity-5 pointer-events-auto ${isTop ? 'cursor-grab active:cursor-grabbing ' : 'pointer-events-none'} will-change-transform`}
     >
       {isTop && (
         <>
